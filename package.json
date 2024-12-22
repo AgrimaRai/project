@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "project",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agrimarai007/project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agrimarai007/project/issues"
+  },
+  "homepage": "https://github.com/agrimarai007/project#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
+}

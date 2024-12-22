@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8b1c5;
+    padding: 4rem 2rem;
+    max-width: 1200px;  /* Set a max-width to limit the width */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.hero-content {
+    max-width: 50%;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content button {
+    background-color: #ff4081;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero-image img {
+    max-height: 400px;
+}
+
+/* Products Section */
+.products {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(20px, 1fr));
+    gap: 10px;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.product-item img {
+    width: 5px;
+    height: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.view-all {
+    margin-top: 2rem;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Footer/Banner Section */
+.footer-banner {
+    background-color: #88ccef;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-banner img {
+        max-width: 50%; /* Ensure it fits the container */
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the image */
+    }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.products {
+    text-align: center; /* Center the content within each product item */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-auto-rows: auto; /* Automatically size rows based on content */
+    gap: 20px; /* Adjust the gap between grid items */
+    padding: 0 2rem; /* Add some padding around the grid */
+    width: 50%; /* Make it span the full width of the page */
+    max-width: 200px; /* Optional: set a maximum width for responsiveness */
+    margin: 0 auto; /* Center the grid horizontally */
+    justify-content: center;
+    
+}
+
+.product-item {
+    border: 1px solid #ccc; /* Add a border to each product item */
+    padding: 20px;
+}
+
+.product-item img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+}
+

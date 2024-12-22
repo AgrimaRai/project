@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Giftos - Testimonial</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5e78;
+        }
+#testimonial {
+  text-align: center;
+  padding: 100px 0;
+}
+
+#testimonial h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.testimonial-content {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  text-align: right;
+}
+
+.testimonial-author h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.testimonial-author p {
+  font-size: 14px;
+  color: #999;
+}
+
+.testimonial-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonial-arrows i {
+  font-size: 24px;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GIFTOS</div>
+        <nav>
+            <ul>
+                <li><a href="code.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="whyus.html">Why Us</a></li>
+                <li><a href="testimonal.html">Testimonial</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="testimonial">
+  <h2>TESTIMONIAL</h2>
+  
+  <!-- Add testimonial form -->
+  <div class="testimonial-form">
+    <h3>Add Your Testimonial</h3>
+    <form id="testimonialForm">
+      <input type="text" id="author" placeholder="Your Name" required>
+      <textarea id="content" placeholder="Your Review" required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+
+  <div id="testimonials-container">
+    <!-- Testimonials will be loaded here dynamically -->
+  </div>
+</section>
+
+<script>
+// Load testimonials
+async function loadTestimonials() {
+    try {
+        const response = await fetch('/api/testimonials');
+        const testimonials = await response.json();
+        
+        const container = document.getElementById('testimonials-container');
+        container.innerHTML = testimonials.map(testimonial => `
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>${testimonial.content}</p>
+                </div>
+                <div class="testimonial-author">
+                    <h4>${testimonial.author}</h4>
+                    <p>${new Date(testimonial.created_at).toLocaleDateString()}</p>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading testimonials:', error);
+    }
+}
+
+// Handle testimonial submission
+document.getElementById('testimonialForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = {
+        author: document.getElementById('author').value,
+        content: document.getElementById('content').value
+    };
+
+    try {
+        const response = await fetch('/api/testimonials', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+            document.getElementById('testimonialForm').reset();
+            loadTestimonials();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+// Load testimonials when page loads
+loadTestimonials();
+</script>
+
+</body>
+</html>

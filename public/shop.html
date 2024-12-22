@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Latest Products</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5e78;
+        }
+
+        /* Title Section */
+        .title {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .title h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* Product Grid */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+
+        .product-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #ff5e78;
+        }
+
+        /* View All Button */
+        .view-products-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5e78;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            margin: 30px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-products-btn:hover {
+            background-color: #e14e66;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">GIFTOS</div>
+        <nav>
+            <ul>
+                <li><a href="code.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="whyus.html">Why Us</a></li>
+                <li><a href="testimonal.html">Testimonial</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <div class="title">
+        <h1>LATEST PRODUCTS</h1>
+    </div>
+
+    <!-- Product Section -->
+    <section class="product-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="ring.jfif" alt="Ring">
+            <h3>Ring</h3>
+            <p>Price <span class="price">$200</span></p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="watch.jfif" alt="Watch">
+            <h3>Watch</h3>
+            <p>Price <span class="price">$300</span></p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="teddy.jfif" alt="Teddy Bear">
+            <h3>Teddy Bear</h3>
+            <p>Price <span class="price">$110</span></p>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="flower.jfif" alt="Flower Bouquet">
+            <h3>Flower Bouquet</h3>
+            <p>Price <span class="price">$45</span></p>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="sunglasses.jfif" alt="Sunglasses">
+            <h3>Teddy Bear</h3>
+            <p>Price <span class="price">$95</span></p>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="coffee mug.jfif" alt="Coffee Mug">
+            <h3>Flower Bouquet</h3>
+            <p>Price <span class="price">$70</span></p>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+            <img src="locket.jfif" alt="Locket">
+            <h3>Watch</h3>
+            <p>Price <span class="price">$400</span></p>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+            <img src="card.jfif" alt="Cards">
+            <h3>Ring</h3>
+            <p>Price <span class="price">$450</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Giftos. All rights reserved.</p>
+    </footer>
+</body>
+</html>

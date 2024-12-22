@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5e78;
+        }
+
+/* ... other header styles ... */
+
+#contact-us {
+  text-align: center;
+  padding: 100px 0;
+}
+
+#contact-us h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.map-form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.map {
+  width: 50%;
+}
+
+.form {
+  width: 50%;
+}
+
+.form form {
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  background-color: #ff0000; /* Replace with your desired color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Giftos</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="code.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="whyus.html">Why Us</a></li>
+                <li><a href="testimonal.html">Testimonial</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contact-us">
+    <h2>Contact Us</h2>
+    <div class="map-form-container">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22828.021957888166!2d2.295077739770169!3d48.858889777694175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f9c2f43f817%3A0x40d48b5a844f6717!2sEiffel%20Tower!5e0!3m2!1sen!2sin!4v1694329545207!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="form">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
